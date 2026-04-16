@@ -120,7 +120,7 @@ Create a `.vscode/mcp.json` file in any project where you want the JIRA tools av
 }
 ```
 
-## Available Tools
+## Available Actions
 
 | Tool | Description | Inputs |
 |------|-------------|--------|
