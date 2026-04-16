@@ -1,4 +1,4 @@
-# MCP JIRA Server
+# MCP JIRA Server (Vibe Coded)
 
 A local MCP (Model Context Protocol) server that connects to JIRA (Cloud or Server/Data Center), enabling AI coding agents to read tickets, add comments, assign issues, and transition statuses.
 
