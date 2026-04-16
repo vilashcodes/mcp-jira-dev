@@ -1,0 +1,40 @@
+{
+  "servers": {
+    "jira": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["${workspaceFolder}/dist/index.js"],
+      "env": {
+        "JIRA_BASE_URL": "${input:jiraBaseUrl}",
+        "JIRA_API_VERSION": "${input:jiraApiVersion}",
+        "JIRA_EMAIL": "${input:jiraEmail}",
+        "JIRA_API_TOKEN": "${input:jiraApiToken}"
+      }
+    }
+  },
+  "inputs": [
+    {
+      "id": "jiraBaseUrl",
+      "type": "promptString",
+      "description": "JIRA base URL (e.g. https://myorg.atlassian.net)",
+      "default": "https://myorg.atlassian.net"
+    },
+    {
+      "id": "jiraApiVersion",
+      "type": "promptString",
+      "description": "JIRA API version: 2 (Server/Data Center with PAT) or 3 (Cloud with email+token)",
+      "default": "2"
+    },
+    {
+      "id": "jiraEmail",
+      "type": "promptString",
+      "description": "JIRA account email (required for API v3 / Cloud only)"
+    },
+    {
+      "id": "jiraApiToken",
+      "type": "promptString",
+      "description": "JIRA API token (from https://id.atlassian.com/manage-profile/security/api-tokens)",
+      "password": true
+    }
+  ]
+}
